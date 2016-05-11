@@ -25,7 +25,8 @@ gulp.task('lessToScss',function(){
 Notice
 -------
 Be Aware that not all less files can be converted properly.
-Ff files are not converted well, you should correct them manually!!
+
+If files are not converted well, you should correct them manually!!
 
 LICENSE
 -------
