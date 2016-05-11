@@ -24,7 +24,8 @@ gulp.task('lessToScss',function(){
 
 Notice
 -------
-This plugin cannot handle with 'when' statement and more.
+Be Aware that not all less files can be converted properly.
+Ff files are not converted well, you should correct them manually!!
 
 LICENSE
 -------
