@@ -1,6 +1,6 @@
 gulp-less-to-scss
 =======
-A gulp plugin convert less files to scss files
+A gulp plugin which converts less files to scss files
 
 Download
 -------
