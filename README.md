@@ -24,7 +24,7 @@ gulp.task('lessToScss',function(){
 
 Notice
 -------
-This plugin cannot handle with 'when' statement.
+This plugin cannot handle with 'when' statement and more.
 
 LICENSE
 -------
