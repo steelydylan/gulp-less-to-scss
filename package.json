@@ -1,0 +1,15 @@
+{
+	"name": "gulp-less-to-scss",
+	"version": "0.0.4",
+	"main": "./index.js",
+	"description":"A gulp plugin convert less to scss",
+	"author":{
+		"name":"steelydylan",
+		"url":"http://horicdesign.com"
+	},
+	"dependencies": {
+		"through2": "*",
+		"gulp-util": "*"
+	},
+	"licenses": "MIT"
+}
