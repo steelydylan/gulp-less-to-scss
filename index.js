@@ -57,7 +57,7 @@ module.exports = function(){
 		//~を除去
 		.replace(/~(\s*['"])/g,'$1')
 		//&が単語にくっついていたら話す
-		.replace(/(.[\w\-]*?)&/g,"$1 &")
+		.replace(/(.[\w\-]+?)&/g,"$1 &")
 		//namespaceを定義
 		.replace(/#([\w\-]*)\s*\{([^\}]*@mixin[\s\S]*)\}/g,function(all,$1,$2){
 			all = all.replace(/#[\w\-]*\s*\{([^\}]*@mixin[\s\S]*)\}/,"$1");
