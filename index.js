@@ -54,6 +54,8 @@ module.exports = function(){
 		.replace(/@extend\s*(.*?)\s*?all;/g,"@extend $1;")
 		//spin関数をadjust-hueに変換
 		.replace(/([\W])spin\(/g,'$1adjust-hue(')
+		.replace(/(\W)fade\(([^)]+?)% *\)/g,'$1rgba($2%/100.0%)')
+		.replace(/(\W)fade\(/g,'$1rgba(')
 		//~を除去
 		.replace(/~(\s*['"])/g,'$1')
 		//&が単語にくっついていたら話す
