@@ -68,6 +68,9 @@ module.exports = function(){
 		})
 		//namespaceをinclude
 		.replace(/#([\w\-]*)\s*>\s@include\s([\w\-]*)\((.*)\);/g,"@include $1_$2($3);")
+		//handle multiple & in a row
+		.replace(/&(&+)/g, function(match, p1){return "&" + p1.replace(/&/g,"#{&}")});
+
 		file.contents = new Buffer(content);
 		file.path = ext(file.path, '.scss'); 
 		this.push(file);
