@@ -13,19 +13,19 @@ module.exports = function(){
 		//argbを除去
 		.replace(/\%\((.*?)\);/g,function(all){
 			var arr = all.match(/argb\(.*?\)/g);
-			if(arr instanceof Array){
-				for(var i = 0,n = arr.length; i < n; i++){
-					arr[i] = arr[i].replace(/argb\(\$(.*?)\)/g,"${$1}");
-				}
-			}
-			all = all.replace(/,argb\(.*?\)/g,"");
-			var i = -1;
-			all = all.replace(/\%d/g,function(al){
+			if (arr instanceof Array) {
+			    for (var i = 0, n = arr.length; i < n; i++) {
+				arr[i] = arr[i].replace(/argb\(\$(.*?)\)/g, "${$1}");
+			    }
+			    all = all.replace(/,argb\(.*?\)/g, "");
+			    var i = -1;
+			    all = all.replace(/\%d/g, function (al) {
 				i++;
 				return arr[i];
-			});
-			all = all.replace(/\%/,'');
-			return all;				         	
+			    });
+			    all = all.replace(/\%/, '');
+			    return all;
+			}				         	
 		})
 		.replace(/ e\(/g, ' unquote(')
 		//@mixinの定義
